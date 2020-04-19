@@ -5,49 +5,76 @@
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@include file="includes/style.css"%>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Welcome page</title>
+
+
     </head>
     <body>
-        <h1>Welcome to Sem 2</h1>
-        
-        <table>
-            <tr><td>Login</td>
-                <td>
-                    <form name="login" action="FrontController" method="POST">
-                        <input type="hidden" name="taget" value="login">
-                        Email:<br>
-                        <input type="text" name="email" value="someone@nowhere.com">
-                        <br>
-                        Password:<br>
-                        <input type="password" name="password" value="sesam">
-                        <br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </td>
-                <td>Or Register</td>
-                <td>
-                    <form name="register" action="FrontController" method="POST">
-                        <input type="hidden" name="taget" value="register">
-                        Email:<br>
-                        <input type="text" name="email" value="someone@nowhere.com">
-                        <br>
-                        Password:<br>
-                        <input type="password" name="password1" value="sesam">
-                        <br>
-                        Retype Password:<br>
-                        <input type="password" name="password2" value="sesam">
-                        <br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </td>
-            </tr>
-        </table>
+    <p>
+        <h3>Carport bredde</h3>
+        <select id = "myList">
+            <option value = "1">one</option>
+            <option value = "2">two</option>
+            <option value = "3">three</option>
+            <option value = "4">four</option>
+        </select>
+    </p>
+
+    <p>
+    <h3>Carport længde</h3>
+    <select id = "myList">
+        <option value = "1">one</option>
+        <option value = "2">two</option>
+        <option value = "3">three</option>
+        <option value = "4">four</option>
+    </select>
+    </p>
+
+    <p>
+    <h3>Tag</h3>
+    <select id = "myList">
+        <option value = "1">one</option>
+        <option value = "2">two</option>
+        <option value = "3">three</option>
+        <option value = "4">four</option>
+    </select>
+    </p>
+
+    <p>
+    <h3>Taghældning</h3>
+    <select id = "myList">
+        <option value = "1">one</option>
+        <option value = "2">two</option>
+        <option value = "3">three</option>
+        <option value = "4">four</option>
+    </select>
+    </p>
+
+    <p>
+    <h3>Redskabsrum bredde</h3>
+    <select id = "myList">
+        <option value = "1">one</option>
+        <option value = "2">two</option>
+        <option value = "3">three</option>
+        <option value = "4">four</option>
+    </select>
+    </p>
+
+    <p>
+    <h3>Redskabsrum længde</h3>
+    <select id = "myList">
+        <option value = "1">one</option>
+        <option value = "2">two</option>
+        <option value = "3">three</option>
+        <option value = "4">four</option>
+    </select>
+    </p>
 
 
 <%--        Bare lige se I har en ide om hvad vi forslå I ikke gør ! det hedder scpript lets --%>
@@ -64,5 +91,5 @@
             ${requestScope.error}
 
         </c:if>
-    </body>
+</body>
 </html>
