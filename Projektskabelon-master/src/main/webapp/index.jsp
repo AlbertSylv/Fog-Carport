@@ -72,7 +72,18 @@
     <h3>Tag</h3>
     <select id = "myList">
         <option value = "1">Plasttrapezplader</option>
-        <option value = "2">??</option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        <option value = "2"></option>
+        
 
     </select>
     </p>
@@ -80,10 +91,14 @@
     <p>
     <h3>Taghældning</h3>
     <select id = "myList">
-        <option value = "1">one</option>
-        <option value = "2">two</option>
-        <option value = "3">three</option>
-        <option value = "4">four</option>
+        <option value = "1">15 grader</option>
+        <option value = "2">20 grader</option>
+        <option value = "3">25 grader</option>
+        <option value = "4">30 grader</option>
+        <option value = "5">35 grader</option>
+        <option value = "6">40 grader</option>
+        <option value = "7">45 grader</option>
+
     </select>
     </p>
 
