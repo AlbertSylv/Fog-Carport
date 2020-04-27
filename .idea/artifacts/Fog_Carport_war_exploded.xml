@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Fog-Carport:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Fog_Carport_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Fog-Carport/web/Web" />
+      <element id="javaee-facet-resources" facet="Fog-Carport/web/Web2" />
+      <element id="javaee-facet-resources" facet="Fog-Carport/web/Web3" />
+    </root>
+  </artifact>
+</component>
