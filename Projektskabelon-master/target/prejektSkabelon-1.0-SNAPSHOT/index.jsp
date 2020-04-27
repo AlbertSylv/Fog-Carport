@@ -72,17 +72,22 @@
     <h3>Tag</h3>
     <select id = "myList">
         <option value = "1">Plasttrapezplader</option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
-        <option value = "2"></option>
+        <option value = "2">Betontagsten - Rød</option>
+        <option value = "3">Betontagsten - Teglrød</option>
+        <option value = "4">Betontagsten - Brun</option>
+        <option value = "5">Betontagsten - Sort</option>
+        <option value = "6">Eternittag B6 - Grå</option>
+        <option value = "7">Eternittag B6 - Sprt</option>
+        <option value = "8">Eternittag B6 - Mokka(Brun)</option>
+        <option value = "9">Eternittag B6 - Rødbrun</option>
+        <option value = "10">Eternittag B6 - Teglrød</option>
+        <option value = "11">Eternittag B7 - Grå</option>
+        <option value = "12">Eternittag B7 - Sort</option>
+        <option value = "13">Eternittag B7 - Mokke(Brun)</option>
+        <option value = "14">Eternittag B7 - Rødbrun</option>
+        <option value = "15">Eternittag B7 - Teglrød</option>
+        <option value = "16">Eternittag B7 - Rødflammet</option>
+
         
 
     </select>
