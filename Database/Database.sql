@@ -90,6 +90,16 @@ CREATE TABLE `requests` (
 		FOREIGN KEY (`email`)
 		REFERENCES `accounts` (`email`)
 		ON DELETE CASCADE
-		ON UPDATE CASCADE
+		ON UPDATE CASCADE,
+	CONSTRAINT `shedidFK`
+		FOREIGN KEY (`shed id`)
+		REFERENCES `shed clothing` (`shed id`)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION,
+	CONSTRAINT `roofidFK`
+		FOREIGN KEY (`roof id`)
+		REFERENCES `roof coating` (`roof id`)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION
 );
 
