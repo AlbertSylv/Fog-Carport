@@ -35,9 +35,9 @@ public class Connector {
 
         }else{
             //Localhost
-            URL = "jdbc:mysql://127.0.0.1:3306/FogCarport?serverTimezone=CET&useSSL=false";
+            URL = "jdbc:mysql://127.0.0.1:3306/carport?serverTimezone=CET&useSSL=false";
             USERNAME = "root";
-            PASSWORD = "1234fem";
+            PASSWORD = "1234";
         }
     }
 }

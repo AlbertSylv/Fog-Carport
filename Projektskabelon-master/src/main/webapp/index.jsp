@@ -16,9 +16,22 @@
 
     </head>
     <body>
+
+    <form action="FrontController" method="post" id="bestilling">
+
+
+        <input type="hidden" name="taget" value="createRequest">
+
+
+
+
     <p>
         <h3>Carport bredde</h3>
-        <select id = "myList">
+
+            <label for="myList1">Choose a width:</label>
+
+        <select id = "myList1" name="width" form="bestilling">
+
             <option value = "1">240 cm</option>
             <option value = "2">270 cm</option>
             <option value = "3">300 cm</option>
@@ -40,11 +53,14 @@
 
 
         </select>
+
     </p>
+
+
 
     <p>
     <h3>Carport længde</h3>
-    <select id = "myList">
+    <select id = "myList2">
 
         <option value = "1">270 cm</option>
         <option value = "2">300 cm</option>
@@ -70,7 +86,7 @@
 
     <p>
     <h3>Tag</h3>
-    <select id = "myList">
+    <select id = "myList3">
         <option value = "1">Plasttrapezplader</option>
         <option value = "2">Betontagsten - Rød</option>
         <option value = "3">Betontagsten - Teglrød</option>
@@ -95,7 +111,7 @@
 
     <p>
     <h3>Taghældning</h3>
-    <select id = "myList">
+    <select id = "myList4">
         <option value = "1">15 grader</option>
         <option value = "2">20 grader</option>
         <option value = "3">25 grader</option>
@@ -109,7 +125,7 @@
 
     <p>
     <h3>Redskabsrum bredde</h3>
-    <select id = "myList">
+    <select id = "myList5">
         <option value = "1">210 cm</option>
         <option value = "2">240 cm</option>
         <option value = "3">270 cm</option>
@@ -133,7 +149,7 @@
 
     <p>
     <h3>Redskabsrum længde</h3>
-    <select id = "myList">
+    <select id = "myList6">
         <option value = "1">150 cm</option>
         <option value = "2">180 cm</option>
         <option value = "3">210 cm</option>
@@ -157,6 +173,10 @@
     </select>
     </p>
 
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Bestil carport med valgte mål</button>
+    </div>
+    </form>
 
 <%--        Bare lige se I har en ide om hvad vi forslå I ikke gør ! det hedder scpript lets --%>
 <%--        <% String error = (String) request.getAttribute( "error");--%>

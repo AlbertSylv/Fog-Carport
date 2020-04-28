@@ -23,17 +23,17 @@ CREATE TABLE `stock` (
 );
 
 CREATE TABLE `roof coating` (
-  `roof id` INT NOT NULL AUTO_INCREMENT,
+  `roofid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `price` INT NOT NULL,
-  PRIMARY KEY (`roof id`)
+  PRIMARY KEY (`roofid`)
 );
 
 CREATE TABLE `shed clothing` (
-  `shed id` INT NOT NULL AUTO_INCREMENT,
+  `shedid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `price` INT NOT NULL,
-  PRIMARY KEY (`shed id`)
+  PRIMARY KEY (`shedid`)
 );
 
 CREATE TABLE `categories` (
@@ -72,33 +72,30 @@ CREATE TABLE `accounts` (
 
 CREATE TABLE `requests` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`roof id` INT NOT NULL,
-	`shed id` INT default NULL,
+	`roofid` INT NOT NULL,
+	`shedid` INT default NULL,
 	`width` INT NOT NULL,
 	`length` INT NOT NULL,
 	`shedWidth` INT NOT NULL,
 	`shedLength` INT NOT NULL,
-	`roof` VARCHAR(100) NOT NULL,
 	`angle` INT NOT NULL, 
 	`note` VARCHAR(500) NOT NULL, 
 	`email` VARCHAR(100) NOT NULL,
 	PRIMARY KEY(`id`),
 	INDEX `emailFK_idx` (`email` ASC) VISIBLE,
 	CONSTRAINT `emailFK`
-	    FOREIGN KEY (`shed id`)
-	    FOREIGN KEY (`roof id`)
 		FOREIGN KEY (`email`)
 		REFERENCES `accounts` (`email`)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE,
 	CONSTRAINT `shedidFK`
-		FOREIGN KEY (`shed id`)
-		REFERENCES `shed clothing` (`shed id`)
+		FOREIGN KEY (`shedid`)
+		REFERENCES `shed clothing` (`shedid`)
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION,
 	CONSTRAINT `roofidFK`
-		FOREIGN KEY (`roof id`)
-		REFERENCES `roof coating` (`roof id`)
+		FOREIGN KEY (`roofid`)
+		REFERENCES `roof coating` (`roofid`)
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION
 );
