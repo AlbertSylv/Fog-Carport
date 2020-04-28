@@ -1,9 +1,16 @@
-DROP TABLE IF EXISTS `orders`;
+CREATE DATABASE  IF NOT EXISTS `carport`;
+
+
+USE `carport`;
+
+
 DROP TABLE IF EXISTS `requests`;
 DROP TABLE IF EXISTS `accounts`;
 DROP TABLE IF EXISTS `stockToCategory`;
 DROP TABLE IF EXISTS `categories`;
 DROP TABLE IF EXISTS `stock`;
+DROP TABLE IF EXISTS `roof coating`;
+DROP TABLE IF EXISTS `shed clothing`;
 
 CREATE TABLE `stock` (
   `ref` VARCHAR(100) NOT NULL,
@@ -13,6 +20,20 @@ CREATE TABLE `stock` (
   `unit` VARCHAR(45) NOT NULL,
   `price` INT NOT NULL,
   PRIMARY KEY (`ref`)
+);
+
+CREATE TABLE `roof coating` (
+  `roof id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `price` INT NOT NULL,
+  PRIMARY KEY (`roof id`)
+);
+
+CREATE TABLE `shed clothing` (
+  `shed id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `price` INT NOT NULL,
+  PRIMARY KEY (`shed id`)
 );
 
 CREATE TABLE `categories` (
@@ -51,6 +72,8 @@ CREATE TABLE `accounts` (
 
 CREATE TABLE `requests` (
 	`id` INT NOT NULL AUTO_INCREMENT,
+	`roof id` INT NOT NULL,
+	`shed id` INT default NULL,
 	`width` INT NOT NULL,
 	`length` INT NOT NULL,
 	`shedWidth` INT NOT NULL,
@@ -62,19 +85,11 @@ CREATE TABLE `requests` (
 	PRIMARY KEY(`id`),
 	INDEX `emailFK_idx` (`email` ASC) VISIBLE,
 	CONSTRAINT `emailFK`
+	    FOREIGN KEY (`shed id`)
+	    FOREIGN KEY (`roof id`)
 		FOREIGN KEY (`email`)
 		REFERENCES `accounts` (`email`)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
 );
 
-CREATE TABLE `orders` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`requestId` INT NOT NULL,
-	PRIMARY KEY(`id`),
-	CONSTRAINT `requestIdFK`
-		FOREIGN KEY (`requestId`)
-		REFERENCES `requests` (`id`)
-		ON DELETE CASCADE
-		ON UPDATE CASCADE
-);
